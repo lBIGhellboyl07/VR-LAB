@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Snowman en X3DOM</title>
+    <script src="https://www.x3dom.org/download/x3dom.js"></script>
+    <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css"/>
+  </head>
+  <body>
+    <h1>Snowman con X3DOM</h1>
+    <x3d width="600px" height="500px">
+      <scene>
+        <!-- Suelo -->
+        <transform translation="0 -0.5 0">
+          <shape>
+            <appearance><material diffuseColor="0.6 0.9 0.6"></material></appearance>
+            <box size="10 0.1 10"></box>
+          </shape>
+        </transform>
+        
+        <!-- Cuerpo -->
+        <transform translation="0 0.5 0">
+          <shape><appearance><material diffuseColor="1 1 1"></material></appearance><sphere radius="0.5"/></shape>
+        </transform>
+        <transform translation="0 1.3 0">
+          <shape><appearance><material diffuseColor="1 1 1"></material></appearance><sphere radius="0.35"/></shape>
+        </transform>
+        <transform translation="0 1.8 0">
+          <shape><appearance><material diffuseColor="1 1 1"></material></appearance><sphere radius="0.25"/></shape>
+        </transform>
+        
+        <!-- Ojos -->
+        <transform translation="-0.08 1.85 0.23">
+          <shape><appearance><material diffuseColor="0 0 0"></material></appearance><sphere radius="0.03"/></shape>
+        </transform>
+        <transform translation="0.08 1.85 0.23">
+          <shape><appearance><material diffuseColor="0 0 0"></material></appearance><sphere radius="0.03"/></shape>
+        </transform>
+        
+        <!-- Nariz -->
+        <transform translation="0 1.8 0.3">
+          <shape><appearance><material diffuseColor="1 0.5 0"></material></appearance><cone bottomRadius="0.05" height="0.2"/></shape>
+        </transform>
+      </scene>
+    </x3d>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Celda de Manufactura en A-Frame</title>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="color: #ECEFF1">
+      <!-- Piso -->
+      <a-plane rotation="-90 0 0" width="20" height="20" color="#BDBDBD"></a-plane>
+      
+      <!-- Paredes -->
+      <a-box position="0 1 -10" depth="0.1" height="2" width="20" color="#9E9E9E"></a-box>
+      <a-box position="-10 1 0" depth="20" height="2" width="0.1" color="#9E9E9E"></a-box>
+      <a-box position="10 1 0" depth="20" height="2" width="0.1" color="#9E9E9E"></a-box>
+
+      <!-- Cinta transportadora -->
+      <a-box position="0 0.3 -4" depth="4" height="0.2" width="2" color="#455A64"></a-box>
+      <!-- Caja sobre la cinta -->
+      <a-box position="0 0.8 -4" depth="0.5" height="0.5" width="0.5" color="#FFC107"></a-box>
+
+      <!-- Mesa de trabajo -->
+      <a-box position="5 1 -5" depth="2" height="0.2" width="2" color="#8D6E63"></a-box>
+      <!-- Patas -->
+      <a-cylinder position="4.2 0.5 -4.2" radius="0.05" height="1" color="#5D4037"></a-cylinder>
+      <a-cylinder position="5.8 0.5 -4.2" radius="0.05" height="1" color="#5D4037"></a-cylinder>
+      <a-cylinder position="4.2 0.5 -5.8" radius="0.05" height="1" color="#5D4037"></a-cylinder>
+      <a-cylinder position="5.8 0.5 -5.8" radius="0.05" height="1" color="#5D4037"></a-cylinder>
+
+      <!-- Robot simulado con primitivas -->
+      <!-- Base -->
+      <a-cylinder position="-5 0.5 -5" radius="0.5" height="1" color="#37474F"></a-cylinder>
+      <!-- Columna -->
+      <a-cylinder position="-5 2 -5" radius="0.2" height="3" color="#546E7A"></a-cylinder>
+      <!-- Brazo 1 -->
+      <a-box position="-5 3.5 -5" depth="0.4" height="0.4" width="2" color="#0288D1"></a-box>
+      <!-- Brazo 2 -->
+      <a-box position="-4 3.5 -5" depth="0.3" height="0.3" width="1.5" rotation="0 0 30" color="#03A9F4"></a-box>
+      <!-- Garra -->
+      <a-box position="-3.3 3.5 -5" depth="0.2" height="0.2" width="0.6" color="#FF5722"></a-box>
+
+      <!-- Luces -->
+      <a-light type="directional" position="-2 4 3" intensity="0.9"></a-light>
+      <a-light type="ambient" intensity="0.4"></a-light>
+
+      <!-- Cámara -->
+      <a-entity position="0 3 10">
+        <a-camera></a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
+
+

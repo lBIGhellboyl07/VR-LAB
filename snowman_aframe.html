@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Snowman en A-Frame</title>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="color: #E0F7FA">
+      
+      <!-- Suelo -->
+      <a-plane rotation="-90 0 0" width="10" height="10" color="#A5D6A7"></a-plane>
+      
+      <!-- Cuerpo del muñeco de nieve -->
+      <a-sphere position="0 0.5 -4" radius="0.5" color="white"></a-sphere>
+      <a-sphere position="0 1.2 -4" radius="0.35" color="white"></a-sphere>
+      <a-sphere position="0 1.7 -4" radius="0.25" color="white"></a-sphere>
+      
+      <!-- Ojos -->
+      <a-sphere position="-0.08 1.8 -3.75" radius="0.03" color="black"></a-sphere>
+      <a-sphere position="0.08 1.8 -3.75" radius="0.03" color="black"></a-sphere>
+      
+      <!-- Nariz -->
+      <a-cone position="0 1.7 -3.7" radius-bottom="0.05" radius-top="0.01" height="0.2" color="orange"></a-cone>
+      
+      <!-- Sombrero -->
+      <a-cylinder position="0 2 -4" radius="0.2" height="0.3" color="black"></a-cylinder>
+      <a-cylinder position="0 1.85 -4" radius="0.3" height="0.05" color="black"></a-cylinder>
+      
+    </a-scene>
+  </body>
+</html>

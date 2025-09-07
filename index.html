@@ -1,98 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Laboratorio de Realidad Virtual</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #ECEFF1;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      color: #333;
-    }
-    header {
-      background: #0288D1;
-      color: white;
-      padding: 1.5rem;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    main {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding: 2rem;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 250px;
-      padding: 1.5rem;
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card h2 {
-      margin: 0.5rem 0 1rem;
-      color: #0288D1;
-    }
-    .card a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: #0288D1;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.2s ease;
-    }
-    .card a:hover {
-      background: #0277BD;
-    }
-    footer {
-      margin-top: 2rem;
-      padding: 1rem;
-      background: #CFD8DC;
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    Laboratorio de Realidad Virtual - Menú Principal
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratorio de Realidad Virtual</title>
+  </head>
+  <body>
+    <head>
+      <meta charset="UTF-8" />
+      <title>Laboratorio de Realidad Virtual</title>
+      <style>
+        .main-content {
+          display: grid;
+          min-height: 100dvh;
+          grid-template-rows: auto 1fr auto;
+        }
 
-  <main>
-    <!-- Snowman en A-Frame -->
-    <div class="card">
-      <h2>Snowman en A-Frame</h2>
-      <p>Muñeco de nieve creado con primitivas en A-Frame.</p>
-      <a href="snowman_aframe.html" target="_blank">Abrir</a>
-    </div>
+        body {
+          font-family: Arial, sans-serif;
+          background: #eceff1;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          color: #333;
+          overflow: hidden;
+        }
+        header {
+          background: #0288d1;
+          color: white;
+          padding: 1.5rem;
+          font-size: 30px;
+          font-weight: bold;
+        }
+        main {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: 2rem;
+          padding: 2rem;
+        }
+        .proyectos {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: center;
+          gap: 2rem;
+        }
+        .card-proyecto {
+          width: 100%;
+          max-width: 250px;
+          background: #fff;
+          border: 1px solid white;
+          border-radius: 12px;
+          box-shadow: 0 2px 10px hsla(0, 0%, 0%, 0.01);
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+        }
+        .card-proyecto-content {
+          padding: 16px;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+        .card-proyecto h2 {
+          font-weight: 400;
+          color: #0288d1;
+          overflow: hidden;
+        }
+        .card-proyecto p {
+          margin-top: auto;
+        }
+        .card-proyecto a {
+          display: inline-block;
+          margin: 0 auto;
+          padding: 0.5rem 1rem;
+          background: #0288d1;
+          color: white;
+          text-decoration: none;
+          border-radius: 6px;
+          transition: background 0.2s ease;
+          width: 25%;
+        }
+        .card-proyecto a:hover {
+          background: #0277bd;
+        }
 
-    <!-- Snowman en X3DOM -->
-    <div class="card">
-      <h2>Snowman en X3DOM</h2>
-      <p>Muñeco de nieve en X3DOM usando HTML y JavaScript.</p>
-      <a href="snowman_x3dom.html" target="_blank">Abrir</a>
-    </div>
+        footer {
+          margin-top: 2rem;
+          padding: 1rem;
+          background: #cfd8dc;
+          font-size: 15px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="main-content">
+        <header>Laboratorio de Realidad Virtual</header>
 
-    <!-- Celda de Manufactura -->
-    <div class="card">
-      <h2>Celda de Manufactura</h2>
-      <p>Celda automatizada en A-Frame.</p>
-      <a href="cell_aframe.html" target="_blank">Abrir</a>
-    </div>
-  </main>
+        <main>
+          <h1>MProyectos</h1>
+          <section class="proyectos">
+            <!-- Snowman en A-Frame -->
+            <div class="card-proyecto">
+              <div class="card-proyecto-content">
+                <h2>Snowman en A-Frame</h2>
+                <p>Muñeco de nieve creado con primitivas en A-Frame.</p>
+                <a href="snowman_aframe.html" target="_blank">Abrir</a>
+              </div>
+            </div>
 
-  <footer>
-    © 2025 - Universidad Militar Nueva Granada | Laboratorio de Realidad Virtual
-  </footer>
-</body>
+            <!-- Snowman en X3DOM -->
+            <div class="card-proyecto">
+              <div class="card-proyecto-content">
+                <h2>Snowman en X3DOM</h2>
+                <p>Muñeco de nieve en X3DOM usando HTML y JavaScript.</p>
+                <a href="snowman_x3dom.html" target="_blank">Abrir</a>
+              </div>
+            </div>
+
+            <!-- Celda de Manufactura -->
+            <div class="card-proyecto">
+              <div class="card-proyecto-content">
+                <h2>Celda de Manufactura</h2>
+                <p>Celda automatizada en A-Frame.</p>
+                <a href="cell_aframe.html" target="_blank">Abrir</a>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer>
+          © 2025 - Universidad Militar Nueva Granada | Laboratorio de Realidad
+          Virtual
+        </footer>
+      </div>
+    </body>
+  </body>
 </html>
+
 
